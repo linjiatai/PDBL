@@ -6,8 +6,36 @@ The code of:
 
 **PDBL: Improving Histopathological Tissue Classification with Plug-and-Play Pyramidal Deep-Broad Learning**, Jiatai Lin, Guoqiang Han, Xipeng Pan, Zaiyi Liu, Hao Chen, Danyi Li, Xiping Jia, Zhenwei Shi, Zhizhen Wang, Yanfen Cui, Haiming Li, Changhong Liang, Li Liang, Ying Wang, Chu Han, in IEEE Transactions on Medical Imaging, doi: 10.1109/TMI.2022.3161787.[[paper]](https://ieeexplore.ieee.org/document/9740140)
 
-We propose a lightweight plug-and-play module (PDBL), which can be easily applied on almost any common CNN-based classification backbone. It can generally improve
-all the three CNN backbones in the experiment for histopathological tissue classification with no re-training burden.
+You can also download the repository from https://github.com/linjiatai/PDBL.
+
+## Abtract
+Histopathological tissue classification is a simpler way to achieve semantic segmentation for the whole slide images, which can alleviate the requirement of pixel-level dense annotations. Existing works mostly leverage the popular CNN classification backbones in computer vision to achieve histopathological tissue classification. In this paper, we propose a super lightweight plug-and-play module, named Pyramidal Deep-Broad Learning (PDBL), for any well-trained classification backbone to improve the classification performance without a re-training burden. For each patch, we construct a multi-resolution image pyramid to obtain the pyramidal contextual information. For each level in the pyramid, we extract the multi-scale deep-broad features by our proposed Deep-Broad block (DB-block). We equip PDBL in three popular classification backbones, ShuffLeNetV2, EfficientNetb0, and ResNet50 to evaluate the effectiveness and efficiency of our proposed module on two datasets (Kather Multiclass Dataset and the LC25000 Dataset). Experimental results demonstrate the proposed PDBL can steadily improve the tissue-level classification performance for any CNN backbones, especially for the lightweight models when given a small among of training samples (less than 10%). It greatly saves the computational resources and annotation efforts.
+
+## Requirements
+- Python 3.7
+- pytorch
+- torchvision
+- CUDA
+- 1×GPU
+- 2×CPU
+
+## Usage
+### Installation
+- Download the repository.
+```
+git clone https://github.com/linjiatai/PDBL.git
+```
+- Install python dependencies.
+```
+pip install -r requirements.txt
+```
+
+### PDBL
+- We provide an example to train a PDBL on 1% KMI set without re-training burden of CNN backbone. 
+
+```
+python main.py --device 0 --save_dir save/ --traindir dataset/KMI_001/ --valdir dataset/KME --batch_size 20 -- n_class --n_workers 8
+```
 
 ## Citation
 If you find the code useful, please consider citing our paper using the following BibTeX entry.
@@ -21,13 +49,4 @@ If you find the code useful, please consider citing our paper using the followin
   doi={10.1109/TMI.2022.3161787}}
 ```
 
-## Prerequisite
-* Tested on Ubuntu 20.04
 
-
-## Usage
-### Run an example experiment without re-training burde of ImageNet pretrained model.
-- To run the whole pipeline, you need to specify the path to the saved model for each round. Please see the command in script.sh.
-```
-bash script.sh
-```
