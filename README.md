@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ```
 python main.py --device 0 --save_dir save/ --traindir dataset/KMI_001/ --valdir dataset/KME --batch_size 20 -- n_class --n_workers 8
 ```
-
+Moreover, the original Kather Dataset and LC25000 Dataset can be download at the links [Kather2019](https://zenodo.org/record/1214456) and [LC25000](https://github.com/tampapath/lung_colon_image_set).
 ## Citation
 If you find the code useful, please consider citing our paper using the following BibTeX entry.
 ```
