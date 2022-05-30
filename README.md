@@ -41,7 +41,7 @@ Moreover, the original Kather Dataset and LC25000 Dataset can be download at the
 ## Citation
 If you find the code useful, please consider citing our paper using the following BibTeX entry.
 ```
-@ARTICLE{9740140,
+@ARTICLE{lin2022pdbl,
   author={Lin, Jiatai and Han, Guoqiang and Pan, Xipeng and Liu, Zaiyi and Chen, Hao and Li, Danyi and Jia, Xiping and Shi, Zhenwei and Wang, Zhizhen and Cui, Yanfen and Li, Haiming and Liang, Changhong and Liang, Li and Wang, Ying and Han, Chu},
   journal={IEEE Transactions on Medical Imaging}, 
   title={PDBL: Improving Histopathological Tissue Classification with Plug-and-Play Pyramidal Deep-Broad Learning}, 
