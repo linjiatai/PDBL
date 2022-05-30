@@ -17,8 +17,6 @@ If you find the code useful, please consider citing our paper using the followin
   journal={IEEE Transactions on Medical Imaging}, 
   title={PDBL: Improving Histopathological Tissue Classification with Plug-and-Play Pyramidal Deep-Broad Learning}, 
   year={2022},
-  volume={},
-  number={},
   pages={1-1},
   doi={10.1109/TMI.2022.3161787}}
 ```
@@ -27,4 +25,9 @@ If you find the code useful, please consider citing our paper using the followin
 * Tested on Ubuntu 20.04
 
 
-
+## Usage
+### Run an example experiment without re-training burde of ImageNet pretrained model.
+- To run the whole pipeline, you need to specify the path to the saved model for each round. Please see the command in script.sh.
+```
+bash script.sh
+```
