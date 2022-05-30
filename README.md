@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ```
 
 ### PDBL
-- We provide an example to train a PDBL on 1% KMI set without re-training burden of CNN backbone. 
+- We provide an example to train a PDBL on 1% KMI set without re-training burden of CNN backbone. You can download the 1% KMI set ([Google Drive](www.baidu.com) or [Baidu Netdisk](www.baidu.com)) and KME ([Google Drive](www.baidu.com) or [Baidu Netdisk](www.baidu.com)) set and unpacked them in **datset** folder.
 
 ```
 python main.py --device 0 --save_dir save/ --traindir dataset/KMI_001/ --valdir dataset/KME --batch_size 20 -- n_class --n_workers 8
