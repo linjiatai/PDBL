@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ```
 
 ### PDBL
-- We provide an example to create and train a PDBL on 1% KMI set without CNN re-training burden. To use this example code, you must download the data set, you must download the 1% KMI set ([Google Drive](www.baidu.com) or [Baidu Netdisk](www.baidu.com)) and KME set ([Google Drive](www.baidu.com) or [Baidu Netdisk](www.baidu.com)) and unpacked them in **datset** folder. And you can train and test the PDBL by the command:
+- We provide an example to create and train a PDBL on 1% KMI set without CNN re-training burden. To use this example code, you must download the data set, you must download the 1% KMI set and KME set ([Baidu Netdisk](https://pan.baidu.com/s/1gLRDYK2lmgoLlZuzLcNIfw?pwd=wfzk ) with code **wfzk**) and unpacked them in **datset** folder. And you can train and test the PDBL by the command:
 
 ```
 python main.py --device 0 --save_dir save/ --traindir dataset/KMI_001/ --valdir dataset/KME --batch_size 20 -- n_class --n_workers 8
